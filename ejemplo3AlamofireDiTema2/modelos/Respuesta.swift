@@ -23,3 +23,8 @@ struct Photo: Decodable{
 }
 
 typealias ListaPhotos = [Photo]
+
+struct NuevoAlbum: Encodable{
+    let userId: Int
+    let title: String
+}

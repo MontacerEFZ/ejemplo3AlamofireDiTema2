@@ -54,4 +54,17 @@ final class ApiConexiones{
             }
         }
     }
+    
+    func addAlbum(album: NuevoAlbum,  success: @escaping (_ respuesta: Album) -> (), failure: @escaping (_ error: Error?) -> ()){
+        let url = "\(BASE_URL)/albums/"
+        
+        AF.request(url, method: .post, parameters: album, encoder: JSONParameterEncoder.default).validate(statusCode: estadoOk).responseDecodable(of: Album.self){
+            respuesta in
+            if let album = respuesta.value, album.id != nil{
+                success(album)
+            }else{
+                failure(respuesta.error)
+            }
+        }
+    }
 }

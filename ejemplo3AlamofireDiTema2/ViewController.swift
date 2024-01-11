@@ -9,11 +9,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var cargando: UIActivityIndicatorView!
+    @IBOutlet weak var lbResultadoListAlbums: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        cargando.hidesWhenStopped = true
+        cargando.stopAnimating()
+            }
+
+    @IBAction func btnGetAlbums(_ sender: Any) {
+        cargando.startAnimating()
+        ApiConexiones.api.getAlbums(){
+            respuesta in
+            self.cargando.stopAnimating()
+            self.lbResultadoListAlbums.text = "Total Albums \(respuesta.count)"
+        }failure: {
+            error in 
+            self.cargando.stopAnimating()
+            self.lbResultadoListAlbums.text = error.debugDescription
+        }
     }
-
-
+    
+    
 }
 

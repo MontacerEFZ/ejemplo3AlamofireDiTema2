@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lbRespuestaPhotoAlbum: UILabel!
+    @IBOutlet weak var textIdAlbum: UITextField!
     @IBOutlet weak var cargando: UIActivityIndicatorView!
     @IBOutlet weak var lbResultadoListAlbums: UILabel!
     
@@ -26,14 +28,29 @@ class ViewController: UIViewController {
         ApiConexiones.api.getAlbums(){
             respuesta in
             self.cargando.stopAnimating()
-            self.lbResultadoListAlbums.text = "Total Albums \(respuesta.count)"
+            self.lbResultadoListAlbums.text = "Total Albums: \(respuesta.count)"
         }failure: {
-            error in 
+            error in
             self.cargando.stopAnimating()
             self.lbResultadoListAlbums.text = error.debugDescription
         }
     }
     
+    @IBAction func btnGetPhotos(_ sender: Any) {
+        cargando.startAnimating()
+        let idAlbum: Int = Int(textIdAlbum.text!)!
+        
+        ApiConexiones.api.getPhotosAlbum(idAlbum: idAlbum){
+            respuesta in
+            self.cargando.stopAnimating()
+            self.lbRespuestaPhotoAlbum.text = "total fotos: \(respuesta.count)"
+        }failure: {
+            error in
+            self.cargando.stopAnimating()
+            self.lbRespuestaPhotoAlbum.text = error.debugDescription
+        }
+                                        
+    }
     
 }
 

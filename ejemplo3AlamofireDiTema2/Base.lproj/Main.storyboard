@@ -27,13 +27,49 @@
                                     <action selector="btnGetAlbums:" destination="BYZ-38-t0r" eventType="touchUpInside" id="smB-FH-eOy"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="9CN-t8-Ego">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmm-uV-hUh">
+                                <rect key="frame" x="20" y="149" width="374" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="9P1-Ct-BQe"/>
+                                    <constraint firstAttribute="height" constant="47" id="Ige-ac-dVm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="9CN-t8-Ego">
                                 <rect key="frame" x="157" y="277" width="100" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="4AF-cp-CvT"/>
+                                    <constraint firstAttribute="height" constant="74" id="glE-1s-5n1"/>
+                                </constraints>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmm-uV-hUh">
-                                <rect key="frame" x="20" y="149" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ue-rP-O94">
+                                <rect key="frame" x="54" y="202" width="54" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="QMT-rH-hS3"/>
+                                    <constraint firstAttribute="width" constant="54" id="uu8-T6-e2W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tF4-Dj-u5O">
+                                <rect key="frame" x="146" y="206" width="248" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="owj-KM-3oM"/>
+                                    <constraint firstAttribute="width" constant="248" id="qAK-cO-Sxi"/>
+                                </constraints>
+                                <state key="normal" title="get fotos album"/>
+                                <connections>
+                                    <action selector="btnGetPhotos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJ9-IJ-Ysa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1a-bt-Ory">
+                                <rect key="frame" x="20" y="244" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="R8H-9f-gIq"/>
+                                    <constraint firstAttribute="height" constant="21" id="jSx-7j-4aq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -42,14 +78,29 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="tF4-Dj-u5O" firstAttribute="top" secondItem="tmm-uV-hUh" secondAttribute="bottom" constant="10" id="5CG-Cy-UXo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cma-bx-4zz" secondAttribute="trailing" constant="107" id="8LR-mA-WQB"/>
+                            <constraint firstItem="2ue-rP-O94" firstAttribute="top" secondItem="tmm-uV-hUh" secondAttribute="bottom" constant="6" id="9ax-50-lex"/>
+                            <constraint firstItem="tmm-uV-hUh" firstAttribute="top" secondItem="Cma-bx-4zz" secondAttribute="bottom" constant="29" id="9dg-7h-FbA"/>
+                            <constraint firstItem="tmm-uV-hUh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BZ4-Fz-VcG"/>
                             <constraint firstItem="Cma-bx-4zz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="CAE-M4-dYf"/>
+                            <constraint firstItem="i1a-bt-Ory" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IRo-kC-IQJ"/>
+                            <constraint firstItem="9CN-t8-Ego" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="Ml6-M2-FDo"/>
+                            <constraint firstItem="9CN-t8-Ego" firstAttribute="top" secondItem="tmm-uV-hUh" secondAttribute="bottom" constant="81" id="Rx4-pz-elh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tF4-Dj-u5O" secondAttribute="trailing" constant="20" id="VQ6-aM-AIc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i1a-bt-Ory" secondAttribute="trailing" constant="20" id="Wql-hK-YM0"/>
                             <constraint firstItem="Cma-bx-4zz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="g8t-Ra-w9Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9CN-t8-Ego" secondAttribute="trailing" constant="157" id="gSF-mI-Zpq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tmm-uV-hUh" secondAttribute="trailing" constant="20" id="jIQ-Ah-eg2"/>
+                            <constraint firstItem="2ue-rP-O94" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="mwW-2V-TjW"/>
+                            <constraint firstItem="i1a-bt-Ory" firstAttribute="top" secondItem="2ue-rP-O94" secondAttribute="bottom" constant="8" symbolic="YES" id="sVZ-9Q-DtL"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cargando" destination="9CN-t8-Ego" id="Xm2-9h-jON"/>
+                        <outlet property="lbRespuestaPhotoAlbum" destination="i1a-bt-Ory" id="BB7-RN-eex"/>
                         <outlet property="lbResultadoListAlbums" destination="tmm-uV-hUh" id="alu-Wz-ClB"/>
+                        <outlet property="textIdAlbum" destination="2ue-rP-O94" id="t7z-1l-r6g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

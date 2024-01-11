@@ -25,4 +25,33 @@ final class ApiConexiones{
                 }
             }
         }
+    
+    func getPhotosAlbum(idAlbum: Int, success: @escaping (_ respuesta: ListaPhotos) -> (), failure: @escaping (_ error: Error?) -> ()){
+        let url = "\(BASE_URL)/photos"
+        
+        let parametros: Parameters = ["albumId": idAlbum] //tiene q coincidir con el nombre del json
+        
+        AF.request(url, method: .get, parameters: parametros).validate(statusCode: estadoOk).responseDecodable(of: ListaPhotos.self){
+            respuesta in
+            if let photos = respuesta.value{
+                success(photos)
+            }else{
+                failure(respuesta.error)
+            }
+        }
+    }
+    
+    func getPhotosAlbum2(idAlbum: Int, success: @escaping (_ respuesta: ListaPhotos) -> (), failure: @escaping (_ error: Error?) -> ()){
+        let url = "\(BASE_URL)/albums/\(idAlbum)/photos"
+        
+        
+        AF.request(url, method: .get).validate(statusCode: estadoOk).responseDecodable(of: ListaPhotos.self){
+            respuesta in
+            if let photos = respuesta.value{
+                success(photos)
+            }else{
+                failure(respuesta.error)
+            }
+        }
+    }
 }

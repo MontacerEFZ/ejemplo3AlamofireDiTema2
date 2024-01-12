@@ -9,6 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lbResultadoCrearAlbum: UILabel!
+    @IBOutlet weak var txtTitle: UITextField!
+    @IBOutlet weak var txtUserId: UITextField!
     @IBOutlet weak var lbRespuestaPhotoAlbum: UILabel!
     @IBOutlet weak var textIdAlbum: UITextField!
     @IBOutlet weak var cargando: UIActivityIndicatorView!
@@ -52,5 +55,19 @@ class ViewController: UIViewController {
                                         
     }
     
+    @IBAction func btnCrearAlbum(_ sender: Any) {
+        cargando.startAnimating()
+        var a = NuevoAlbum(userId: Int(txtUserId.text!)!, title: txtTitle.text!)
+        
+        ApiConexiones.api.addAlbum(album: a){
+            respuesta in
+            self.cargando.stopAnimating()
+            self.lbResultadoCrearAlbum.text = "Id nuevo \(respuesta.id)"
+        }failure: {
+            error in
+            self.cargando.stopAnimating()
+            self.lbResultadoCrearAlbum.text = error.debugDescription
+        }
+    }
 }
 

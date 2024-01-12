@@ -74,6 +74,45 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="userId" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Byc-FN-w0g">
+                                <rect key="frame" x="20" y="402" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="XuE-Xn-9Mt"/>
+                                    <constraint firstAttribute="height" constant="34" id="j5f-sD-pXE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZv-q6-bVl">
+                                <rect key="frame" x="20" y="465" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Xef-7J-GwE"/>
+                                    <constraint firstAttribute="width" constant="374" id="dIp-jy-ngm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWV-6n-b2c">
+                                <rect key="frame" x="275" y="528" width="119" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Md2-9A-Fpw"/>
+                                    <constraint firstAttribute="width" constant="119" id="nVe-xx-bj9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jI-IW-RGc">
+                                <rect key="frame" x="54" y="528" width="106" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Hlx-g2-4pP"/>
+                                    <constraint firstAttribute="width" constant="106" id="Xw2-Zr-PpI"/>
+                                </constraints>
+                                <state key="normal" title="crear album"/>
+                                <connections>
+                                    <action selector="btnCrearAlbum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Upd-Kv-fNT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -83,24 +122,37 @@
                             <constraint firstItem="2ue-rP-O94" firstAttribute="top" secondItem="tmm-uV-hUh" secondAttribute="bottom" constant="6" id="9ax-50-lex"/>
                             <constraint firstItem="tmm-uV-hUh" firstAttribute="top" secondItem="Cma-bx-4zz" secondAttribute="bottom" constant="29" id="9dg-7h-FbA"/>
                             <constraint firstItem="tmm-uV-hUh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BZ4-Fz-VcG"/>
+                            <constraint firstItem="6jI-IW-RGc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="Bbm-p0-xpk"/>
                             <constraint firstItem="Cma-bx-4zz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="CAE-M4-dYf"/>
+                            <constraint firstItem="Byc-FN-w0g" firstAttribute="top" secondItem="9CN-t8-Ego" secondAttribute="bottom" constant="51" id="GSB-bX-QV7"/>
                             <constraint firstItem="i1a-bt-Ory" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IRo-kC-IQJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aZv-q6-bVl" secondAttribute="trailing" constant="20" id="Kqn-J4-IXd"/>
                             <constraint firstItem="9CN-t8-Ego" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="Ml6-M2-FDo"/>
                             <constraint firstItem="9CN-t8-Ego" firstAttribute="top" secondItem="tmm-uV-hUh" secondAttribute="bottom" constant="81" id="Rx4-pz-elh"/>
+                            <constraint firstItem="6jI-IW-RGc" firstAttribute="top" secondItem="aZv-q6-bVl" secondAttribute="bottom" constant="29" id="TtL-pV-gNG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tF4-Dj-u5O" secondAttribute="trailing" constant="20" id="VQ6-aM-AIc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i1a-bt-Ory" secondAttribute="trailing" constant="20" id="Wql-hK-YM0"/>
+                            <constraint firstItem="aZv-q6-bVl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dEu-f1-kbX"/>
                             <constraint firstItem="Cma-bx-4zz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="g8t-Ra-w9Q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9CN-t8-Ego" secondAttribute="trailing" constant="157" id="gSF-mI-Zpq"/>
+                            <constraint firstItem="aZv-q6-bVl" firstAttribute="top" secondItem="Byc-FN-w0g" secondAttribute="bottom" constant="29" id="j1f-LQ-dCd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tmm-uV-hUh" secondAttribute="trailing" constant="20" id="jIQ-Ah-eg2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rWV-6n-b2c" secondAttribute="trailing" constant="20" id="m7l-Mv-9eD"/>
                             <constraint firstItem="2ue-rP-O94" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="mwW-2V-TjW"/>
+                            <constraint firstItem="rWV-6n-b2c" firstAttribute="top" secondItem="aZv-q6-bVl" secondAttribute="bottom" constant="29" id="naf-gg-IsS"/>
                             <constraint firstItem="i1a-bt-Ory" firstAttribute="top" secondItem="2ue-rP-O94" secondAttribute="bottom" constant="8" symbolic="YES" id="sVZ-9Q-DtL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Byc-FN-w0g" secondAttribute="trailing" constant="20" id="snM-YR-b6h"/>
+                            <constraint firstItem="Byc-FN-w0g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vZj-Yy-gXL"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cargando" destination="9CN-t8-Ego" id="Xm2-9h-jON"/>
                         <outlet property="lbRespuestaPhotoAlbum" destination="i1a-bt-Ory" id="BB7-RN-eex"/>
+                        <outlet property="lbResultadoCrearAlbum" destination="rWV-6n-b2c" id="AOr-Od-CGk"/>
                         <outlet property="lbResultadoListAlbums" destination="tmm-uV-hUh" id="alu-Wz-ClB"/>
                         <outlet property="textIdAlbum" destination="2ue-rP-O94" id="t7z-1l-r6g"/>
+                        <outlet property="txtTitle" destination="aZv-q6-bVl" id="kfW-mw-6mI"/>
+                        <outlet property="txtUserId" destination="Byc-FN-w0g" id="amK-VR-7Kw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
